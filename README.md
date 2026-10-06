@@ -10,7 +10,7 @@ Round 1
 
 Market making on ASH_COATED_OSMIUM, focused on spread capture.
 Passive bid logic for INTARIAN_PEPPER_ROOT.
-Solved the manual challenge (auction pricing) and achieved the highest possible score.
+Solved the manual challenge and achieved the highest possible score.
 
 Round 2
 
