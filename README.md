@@ -30,7 +30,7 @@ Deployed a Black-Scholes implied volatility smile framework for the options. We 
 Round 5
 
 Microstructure analysis: order flow imbalance, spread distributions and related work.
-Product segmentation was done by teammates, not me.
+Product categorisation was done by teammates, not me.
 What went wrong in Round 4
 
 In Round 3 we priced options with a Black-Scholes model plus an OU drift adjustment. In Round 4 we switched to an IV smile framework. We had not effectively tested whether it suited the underlying, which is mean-reverting and not log-normal, and the PnL was negative, which costed us a chunk of our rank.
@@ -42,14 +42,24 @@ Known limitations of the Round 3 code
 I'd do several things differently now:
 
 Hard-coded parameters. The OU speed, long-run mean fallback, edge thresholds and the delta approximation used for high strikes were set by hand. I did not estimate the OU half-life from data.
+
 No walk-forward validation on those parameters.
+
 One desk quotes full size without checking the book, so it can cross the spread and take bad prices.
+
 Inventory logic on one product limits size by absolute position, so it can't always reduce risk when it should.
+
 Limited handling of empty or one-sided order books. Several functions would raise an error on a malformed book.
+
 What I took from it
+
 Microstructure basics: spread capture, inventory risk, order flow imbalance.
+
 Pricing options in Python from scratch (Black-Scholes, Greeks, implied volatility) and why the model has to match the process.
-Working in a team of five where each person owned different parts.
+
+Working in a team of five where each person owned different roles.
+
 Writing down what failed, and why.
+
 Files
 trader_FINAL_r3.py: the Round 3 trader (requires IMC's datamodel module to run).
