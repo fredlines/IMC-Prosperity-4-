@@ -62,4 +62,5 @@ Working in a team of five where each person owned different roles.
 Writing down what failed, and why.
 
 Files
+
 trader_FINAL_r3.py: the Round 3 trader (requires IMC's datamodel module to run).
